@@ -18,8 +18,8 @@ public class Account {
 	}
 
 	public void setBalance(int balance) {
-		if(0 > balance ){
-			System.out.println("0이상의 숫자를 입력해주세요");
+		if(0 >= balance ){
+			System.out.println("0보다 큰 숫자를 입력해주세요");
 		}else{
 			this.balance = balance;
 		}
