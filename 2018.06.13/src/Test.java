@@ -40,7 +40,10 @@ public class Test {
 		panel.add(button3);
 
 		contentPane.add(panel, BorderLayout.SOUTH);
-
+		
+		button1.addActionListener(new AddActionListener(table,text1,text2,text3,text4));
+		button2.addActionListener(new RemoveActionListener(table));
+		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setVisible(true);
