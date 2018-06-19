@@ -7,10 +7,10 @@ import java.sql.Statement;
 import java.util.Vector;
  
 public class ScoreDAO {
-	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+	private static final String DRIVER = "com.mysql.jdbc.Driver";
 	private static final String URL = "jdbc:mysql://localhost/test?serverTimezone=UTC";
-	private static final String USER = "test";
-	private static final String PASS = "test";
+	private static final String USER = "root";
+	private static final String PASS = "1234";
  
 	public Connection getConn() {
 		Connection con = null;
