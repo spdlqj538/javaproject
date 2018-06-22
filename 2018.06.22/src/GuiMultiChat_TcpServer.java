@@ -44,7 +44,7 @@ public class GuiMultiChat_TcpServer {
 
 		try {
 			serverSocket = new ServerSocket(7777);
-			System.out.println("서버가 시작되었다.");
+			System.out.println("서버가 시작되었습니다.");
 
 			while (true) {
 				socket = serverSocket.accept();
