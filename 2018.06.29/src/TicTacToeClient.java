@@ -4,13 +4,15 @@ import java.net.*;
 import javax.swing.*;
 
 public class TicTacToeClient extends Thread {
-	private JButton[][] buttons = new JButton[3][3];
+	private JButton[][] buttons = new JButton[5][5];
 	private char me, other;
 	private JFrame frame;
 	private JPanel panel;
 	private JLabel message;
 	private Socket socket;
 	private BufferedReader input;
+	
+	
 	private PrintWriter output;
 
 	public TicTacToeClient() throws UnknownHostException, IOException {
@@ -21,17 +23,17 @@ public class TicTacToeClient extends Thread {
 
 		frame = new JFrame();
 		panel = new JPanel();
-		panel.setLayout(new GridLayout(3, 3, 5, 5));
+		panel.setLayout(new GridLayout(5, 5, 5, 5));
 		Font font = new Font("Dialog", Font.ITALIC, 50);
 		message = new JLabel("여기에 메시지가 표시됩니다.");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(panel, BorderLayout.CENTER);
 		frame.add(message, BorderLayout.SOUTH);
-		frame.setSize(300, 300);
+		frame.setSize(500, 500);
 		frame.setVisible(true);
 
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++) {
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
 				final int ii = i;
 				final int jj = j;
 				buttons[i][j] = new JButton(" ");

@@ -34,7 +34,7 @@ public class TicTacToeServer {
 }
 
 class Game {
-	char[][] boards = new char[3][3];
+	char[][] boards = new char[5][5];
 
 	public void setBoard(int i, int j, char playerMark) {
 		boards[i][j] = playerMark;
@@ -45,11 +45,15 @@ class Game {
 	}
 
 	public void printBoard() {
-		for (int k = 0; k < 3; k++) {
-			System.out.println("  " + boards[k][0] + "| " + boards[k][1] + "| " + boards[k][2]);
-			if (k != 2)
-				System.out.println("---|---|---");
+		for (int k = 0; k < 5; k++) {
+			System.out.println("  " + boards[k][0] + "| " + boards[k][1] + "| " + boards[k][2] + "| " + boards[k][3] + "| " + boards[k][4] );
+			if (k != 4)
+				System.out.println("---|---|---|---|---");
 		}
+	}
+	
+	public void checkWin() {
+		
 	}
 }
 
